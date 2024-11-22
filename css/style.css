@@ -212,6 +212,7 @@ body {
 
 .companies img {
     max-height: 120px;
+    max-width: 220px;
 }
 
 #comp1:hover {
@@ -422,14 +423,29 @@ footer img {
 
 
 .contact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-top: 30px;
 }
 
+.input__block-wrap {
+    margin-top: 30px;
+}
+
+.input__block-wrap h2 {
+    font-size: 26px;
+    border-bottom: solid 1px var(--upp-text-color);
+    margin-bottom: 20px;
+}
+
+.input__block {
+    display: flex;
+    /* flex-wrap: wrap;
+    justify-content: center; */
+    flex-direction: column;
+    gap: 20%;
+}
+
 .input__wrapper {
-    width: 40%;
+    /* width: 40%; */
     margin-bottom: 30px;
 }
 
@@ -487,6 +503,18 @@ footer img {
     font-size: 22px;
 }
 
+
+
+@media (max-width: 1320px) {
+    .companies {
+        margin: 30px 0;
+    }
+
+    .podcast iframe {
+        width: 65%;
+        height: 400px;
+    }
+}
 
 @media (max-width: 1100px) {
     .header__wrap .header__menu {
@@ -676,10 +704,11 @@ footer img {
     }
 
     .companies {
-        margin: 0 0 20px 0;
+        margin: 0 0 30px 0;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 30px;
+        justify-content: center;
     }
 
     .pub__comp img {
